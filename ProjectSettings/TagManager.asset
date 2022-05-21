@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Road
+    uniqueID: 2467959957
+    locked: 0
+  - name: Player
+    uniqueID: 1342812863
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
