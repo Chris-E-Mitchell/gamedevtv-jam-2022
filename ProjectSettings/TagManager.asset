@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Addition
+  - Reduction
+  - Road
   layers:
   - Default
   - TransparentFX
@@ -40,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Road
     uniqueID: 2467959957
+    locked: 0
+  - name: Pickups
+    uniqueID: 2745562127
     locked: 0
   - name: Player
     uniqueID: 1342812863
