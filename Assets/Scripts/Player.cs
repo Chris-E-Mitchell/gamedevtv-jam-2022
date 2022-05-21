@@ -31,6 +31,6 @@ public class Player : MonoBehaviour
     {
         // Note here that rawInput.x will be less if player input is pusing a y direction as well, consider for future improvement
         float xVelocity = rawMoveInput.x * moveSpeed;
-        myRigidBody.velocity = new(xVelocity * moveSpeed, 0f);
+        myRigidBody.velocity = new(xVelocity, 0f);
     }
 }

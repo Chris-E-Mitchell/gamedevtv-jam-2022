@@ -21,11 +21,11 @@ public class SpeedManager : MonoBehaviour
 
     IEnumerator IncreaseGameSpeed()
     {
-        while(gameSpeed <= maxGameSpeed)
+        while(gameSpeed < maxGameSpeed)
         {
             gameSpeed += gameSpeedIncrement;
             Debug.Log("Game Speed is now:" + gameSpeed);
-            yield return new WaitForSecondsRealtime(secondsBeforeSpeedIncrease);
+            yield return new WaitForSeconds(secondsBeforeSpeedIncrease);
         }
     }
 
