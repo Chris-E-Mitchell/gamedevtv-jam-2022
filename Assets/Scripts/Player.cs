@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D myRigidBody;
     Vector2 rawMoveInput;
+    float roadEdgeXPosition = 1.8f;
     
     
     // Start is called before the first frame update
@@ -31,6 +32,14 @@ public class Player : MonoBehaviour
     {
         // Note here that rawInput.x will be less if player input is pusing a y direction as well, consider for future improvement
         float xVelocity = rawMoveInput.x * moveSpeed;
-        myRigidBody.velocity = new(xVelocity, 0f);
+
+        if ((xVelocity < 0 && transform.position.x <= -roadEdgeXPosition) || (xVelocity > 0 && transform.position.x >= roadEdgeXPosition))
+        {
+            myRigidBody.velocity = Vector2.zero;
+        }
+        else 
+        {
+            myRigidBody.velocity = new(xVelocity, 0f); 
+        }
     }
 }

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Road : MonoBehaviour
+public class Background : MonoBehaviour
 {
     //This offset adjusts the speed of the scroll to match the velocity of the pickups
     //There should be some way to calculate this correctly, but is currently set manually
-    [SerializeField] float offsetAdjustment = 2.75f;
+    [SerializeField] float offsetAdjustment = 30f;
 
     SpeedManager speedManager;
     SpriteRenderer spriteRenderer;
@@ -21,7 +21,7 @@ public class Road : MonoBehaviour
     void FixedUpdate()
     {
         float yOffset = spriteRenderer.material.mainTextureOffset.y;
-        yOffset += (speedManager.GetGameSpeed()/offsetAdjustment) * Time.deltaTime;
-        spriteRenderer.material.mainTextureOffset = new(0f, yOffset);
+        yOffset += (speedManager.GetGameSpeed() / offsetAdjustment) * Time.deltaTime;
+        spriteRenderer.material.mainTextureOffset = new(0f, yOffset);      
     }
 }

@@ -24,6 +24,11 @@ public class ScoreKeeper : MonoBehaviour
         return score;
     }
 
+    public int GetMaxScore()
+    {
+        return maxScore;
+    }
+
     public void AddScore(int value)
     {
         score += value;

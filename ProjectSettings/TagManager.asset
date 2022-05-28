@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 121521051
+    locked: 0
   - name: Road
     uniqueID: 2467959957
     locked: 0
@@ -52,4 +55,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Clouds
+    uniqueID: 1898671851
     locked: 0
