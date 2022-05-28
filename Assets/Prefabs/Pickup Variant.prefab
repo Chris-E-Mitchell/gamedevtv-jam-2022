@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4098298685470166916, guid: dd04097436a45544493afd6eb46558fa, type: 3}
       propertyPath: m_Name
-      value: Pickup
+      value: Pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4098298685470166916, guid: dd04097436a45544493afd6eb46558fa, type: 3}
       propertyPath: m_TagString
-      value: Reduction
+      value: Addition
       objectReference: {fileID: 0}
     - target: {fileID: 4098298685470166917, guid: dd04097436a45544493afd6eb46558fa, type: 3}
       propertyPath: m_RootOrder
@@ -63,5 +63,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -520984513, guid: d6ad3d0b76c10514999e02c54d10985f, type: 3}
+    - target: {fileID: 8555527403841585768, guid: dd04097436a45544493afd6eb46558fa, type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555527403841585768, guid: dd04097436a45544493afd6eb46558fa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1549405169
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd04097436a45544493afd6eb46558fa, type: 3}

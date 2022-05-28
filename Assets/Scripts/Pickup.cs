@@ -7,12 +7,14 @@ public class Pickup : MonoBehaviour
     [SerializeField] int pointsValue = 1;
     SpeedManager speedManager;
     Rigidbody2D myRigidBody;
+    ScoreKeeper scoreKeeper;
     float moveSpeed = 1f;
     
     void Awake()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         speedManager = FindObjectOfType<SpeedManager>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     void Update()
@@ -32,6 +34,15 @@ public class Pickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (gameObject.CompareTag("Addition"))
+            {
+                scoreKeeper.AddScore(pointsValue);
+            }
+            else if (gameObject.CompareTag("Reduction"))
+            {
+                scoreKeeper.AddScore(-pointsValue);
+            }
+
             Destroy(gameObject);
         }
     }

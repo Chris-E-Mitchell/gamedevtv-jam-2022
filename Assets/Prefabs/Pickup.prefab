@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4098298685470166920}
   m_Layer: 0
   m_Name: Pickup
-  m_TagString: Addition
+  m_TagString: Reduction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,4 +168,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d4fb420c9e7f74892274641dc7f99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsValue: 1
+  pointsValue: 5
