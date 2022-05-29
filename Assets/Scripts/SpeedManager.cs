@@ -19,6 +19,11 @@ public class SpeedManager : MonoBehaviour
         return gameSpeed;
     }
 
+    public float GetMaxGameSpeed()
+    {
+        return maxGameSpeed;
+    }
+
     IEnumerator IncreaseGameSpeed()
     {
         while(gameSpeed < maxGameSpeed)

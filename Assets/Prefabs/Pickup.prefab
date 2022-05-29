@@ -169,3 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsValue: 5
+  splatSprite: {fileID: 21300000, guid: e6a1cec1dc0988040a7040348fc53947, type: 3}
+  splatSFX: {fileID: 8300000, guid: 05d55ec1baefbd845953d42b0e8456a6, type: 3}
+  splatVolume: 0.05

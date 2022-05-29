@@ -5,8 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float minEnginePitch = 1.5f;
+    [SerializeField] float maxEnginePitch = 2.5f;
 
+    SpeedManager speedManager;
     Rigidbody2D myRigidBody;
+    AudioSource myAudioSource;
     Vector2 rawMoveInput;
     float roadEdgeXPosition = 1.8f;
     
@@ -14,13 +18,16 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        speedManager = FindObjectOfType<SpeedManager>();
         myRigidBody = GetComponent<Rigidbody2D>();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        AdjustEnginePitch();
     }
 
     public void SetRawMoveInput(Vector2 vector)
@@ -41,5 +48,13 @@ public class Player : MonoBehaviour
         {
             myRigidBody.velocity = new(xVelocity, 0f); 
         }
+    }
+
+    void AdjustEnginePitch()
+    {
+        float gameSpeedPercent = speedManager.GetGameSpeed() / speedManager.GetMaxGameSpeed();
+        float newPitch = minEnginePitch + ((maxEnginePitch - minEnginePitch) * gameSpeedPercent);
+
+        myAudioSource.pitch = newPitch;
     }
 }

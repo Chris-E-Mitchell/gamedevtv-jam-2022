@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802511348874846024}
   - component: {fileID: 1802511348874846025}
-  - component: {fileID: 1802511348874846022}
+  - component: {fileID: 7362079841345138958}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: Untagged
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802511348874846023}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1802511348874846022
+--- !u!114 &7362079841345138958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802511348874846023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036973d9dd14ce0438025596fa7bf6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 124256232a2b6254b868ce5fb1fdeef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offsetAdjustment: 15

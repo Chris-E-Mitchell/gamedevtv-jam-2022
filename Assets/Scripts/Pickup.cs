@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    [SerializeField] int pointsValue = 1;
+    [SerializeField] int pointsValue = 5;
+    [SerializeField] Sprite splatSprite;
+    [SerializeField] AudioClip splatSFX;
+    [SerializeField] float splatVolume = 0.1f;
     SpeedManager speedManager;
     Rigidbody2D myRigidBody;
+    SpriteRenderer spriteRenderer;
     ScoreKeeper scoreKeeper;
     float moveSpeed = 1f;
+    bool isHit;
     
     void Awake()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         speedManager = FindObjectOfType<SpeedManager>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
@@ -32,7 +38,7 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isHit)
         {
             if (gameObject.CompareTag("Addition"))
             {
@@ -43,7 +49,10 @@ public class Pickup : MonoBehaviour
                 scoreKeeper.AddScore(-pointsValue);
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            isHit = true;
+            spriteRenderer.sprite = splatSprite;
+            AudioSource.PlayClipAtPoint(splatSFX, Camera.main.transform.position, splatVolume);
         }
     }
 }

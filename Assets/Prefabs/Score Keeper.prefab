@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScore: 100
-  scoreThreshold: 0.1
+  scoreThreshold: 0.2
   scoreSlider: {fileID: 0}
   timer: {fileID: 0}
